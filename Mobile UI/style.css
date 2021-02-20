@@ -1,0 +1,41 @@
+*{
+    margin: 70;
+    padding: 70;
+    font-family: 'Verdana, sans-serif';
+}
+.common-btn{
+    padding: 12px 30px;
+    background-color:  rgb(85, 223, 177);
+    outline: none;
+    border: 2px solid rgb(85, 223, 177);   
+    font-weight: bold;
+    font-size: medium;
+    cursor: pointer;
+    margin: 0px 30px;
+}
+form{
+    max-width: 300px;
+    margin: 30px 55px;
+}
+form input{
+    width: 100%;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    outline: none;
+    box-sizing: border-box;
+    border: 1px solid rgb(85, 223, 177);
+}
+.btn{
+    background-color:  rgb(255, 255, 255);
+    outline: none;
+    border: 2px solid rgb(85, 223, 177);
+    width: auto;
+    padding: 10px 30px;
+    margin-left: 50px;
+    cursor: pointer ;
+
+}
+h3{
+    font-size: 20px;
+    padding-left: 50px;
+}

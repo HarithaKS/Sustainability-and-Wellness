@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<style>
+  a{
+  background-color: none;
+  padding: 12px 120px;
+  font-size: medium;
+  color:blue;
+  text-decoration: none;
+  width: auto;
+}
+#search{
+  float: left;
+  width: 700px;
+  height: 70px;
+  padding-left: 40px;
+}
+#user{
+  float: left;
+  width: 700px;
+  height: 70px;
+  padding-left: 40px;
+}
+
+</style>
+<body>
+
+<div class="tab"><br><br>
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">DASHBOARD</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">HOME</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">SETTINGS</button>
+</div>
+
+<div id="London" class="tabcontent">
+    <div class="admincontainer">
+      <img id="search"src="img/search.png" alt="na">
+       <img src="img/images.png" alt="na" width="50px" height="50px">
+       <p>Admin</p>
+    </div>
+    <br> <br>
+  <div> 
+    <section id="boxes">
+        <div class="container">
+            <div class="box">
+                <p>TOTAL USERS</p> <br>
+                <p>202</p>
+            </div>
+            <div class="box">
+                <p>TOTAL ACTIVE USERS</p> <br>
+                <p>20</p>
+                </div>
+                <div class="box">
+                    <p>TOTAL EMPLOYEES</p> <br>
+                    <p>250</p>
+                    </div>
+        </div>
+    </section> 
+  </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     <img id="chat" src="img/chat.png" alt="na">
+</div>
+
+<div id="Paris" class="tabcontent">
+    <div class="admincontainer">
+      <img id="user"src="img/search.png" alt="na">
+        <img src="img/images.png" alt="na" width="50px" height="50px">
+        <p>Admin</p> 
+        <br><br><br><br><br><br>
+        <table>
+            <tr>
+              <th>Name</th>
+              <th>Employee ID</th>
+              <th>Designation</th>
+              <th>Mobile Number </th>
+              
+              
+            </tr>
+            <tr>
+              <td>User1</td>
+              <td>US001</td>
+              <td>Manager</td>
+              <td>5028293038 <a href="userprofile.html">View Records</a> </td>
+            </tr>
+            <tr>
+              <td>User2</td>
+              <td>US002</td>
+              <td>HR Manager</td>
+              <td>9473820102 <a href="userprofile.html">View Records</td>
+            </tr>
+            <tr>
+              <td>User3</td>
+              <td>US003</td>
+              <td>SWE</td>
+              <td>6773824697 <a href="userprofile.html">View Records</td>
+            </tr>
+            <tr>
+                <td>User4</td>
+                <td>US004</td>
+                <td>SWE-1</td>
+                <td>7738246987 <a href="userprofile.html">View Records</td>
+            </tr>
+            <tr>
+                <td>User5</td>
+                <td>US005</td>
+                <td>SWE-3</td>
+                <td>9773824697 <a href="userprofile.html">View Records</td>
+              </tr>
+              <tr>
+                <td>User6</td>
+                <td>US006</td>
+                <td>SDE</td>
+                <td>8773824697 <a href="userprofile.html">View Records</td>
+              </tr>
+              <tr>
+                <td>User7</td>
+                <td>US007</td>
+                <td>SDE</td>
+                <td>3773824697 <a href="userprofile.html">View Records</td>
+              </tr>
+              <tr>
+                <td>User8</td>
+                <td>US008</td>
+                <td>SWE</td>
+                <td>0773824697 <a href="userprofile.html">View Records</td>
+              </tr>
+              <tr>
+                <td>User9</td>
+                <td>US009</td>
+                <td>Technician</td>
+                <td>6773824697 <a href="userprofile.html">View Records</td>
+              </tr>
+              <tr>
+                <td>User10</td>
+                <td>US010</td>
+                <td>SWE</td>
+                <td>8873824697 <a href="userprofile.html">View Records</td>
+              </tr>
+              <tr>
+                <td>User11</td>
+                <td>US011</td>
+                <td>Content Writer</td>
+                <td>6773824697 <a href="userprofile.html">View Records</td>
+              </tr>
+              <tr>
+                <td>User12</td>
+                <td>US012</td>
+                <td>SWE-2</td>
+                <td>7382928847 <a href="userprofile.html">View Records</td>
+              </tr>
+            
+          </table>
+     </div>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+    <div class="admincontainer">
+        <img src="img/images.png" alt="na" width="50px" height="50px">
+        <p>Admin</p>
+     </div>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 

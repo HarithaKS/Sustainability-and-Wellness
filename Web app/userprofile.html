@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="tab">
+    <br><br><br>
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">USER PROFILE</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">RECORDS</button>
+  
+</div>
+
+<div id="London" class="tabcontent">
+    <div class="admincontainer">
+       <img src="img/images.png" alt="na" width="50px" height="50px">
+       <p>Admin</p>
+    </div>
+    <br><br><br>
+    <table>
+        <tr>
+          <th>Name</th>
+          <th>Employee ID</th>
+          <th>Designation</th>
+          <th>Mobile Number</th>
+          
+        </tr>
+        <tr>
+          <td>User1</td>
+          <td>US001</td>
+          <td>Manager</td>
+          <td>5028293038</td>
+        </tr>
+    </table>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <a href="chatbot/index.html"><img id="chat" src="img/chat.png" alt="na"></a> 
+</div>
+
+<div id="Paris" class="tabcontent">
+    <div class="admincontainer">
+        <img src="img/images.png" alt="na" width="50px" height="50px">
+        <p>Admin</p> 
+        <br><br><br><br><br><br>
+        <section id="details">
+            <div class="details1">
+                <div class="box">
+                    <h5>BLOOD PRESSURE </h5> <br><br>
+                    <button type="submit"><a href="RECORDS.html">VIEW HISTORY</a></button>
+                </div>
+                <div class="box">
+                    <h5>CHOLESTEROL LEVEL</h5><br><br>
+                    <button type="submit"><a href="cholesterolrecords.html">VIEW HISTORY</a></button>
+                </div>
+                <div class="box">
+                    <h5>GLUCOSE LEVEL</h5><br><br>
+                    <button type="submit"><a href="glucoserecorde.html">VIEW HISTORY</a></button>
+                </div>
+                <div class="box">
+                    <h5>PULSE RATE</h5> <br><br>
+                    <button type="submit"><a href="RECORDS.html">VIEW HISTORY</a></button>
+                </div>
+                <div class="box">
+                    <h5>RESPIRATORY RATE</h5> <br><br>
+                    <button type="submit"><a href="RECORDS.html">VIEW HISTORY</a></button>
+                </div>
+                <div class="box">
+                    <h5>OXYGEN SATURATION</h5> <br><br>
+                    <button type="submit"><a href="RECORDS.html">VIEW HISTORY</a></button>
+                </div>
+                
+            </div>
+        </section> 
+
+
+</div></div> 
+        
+
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 

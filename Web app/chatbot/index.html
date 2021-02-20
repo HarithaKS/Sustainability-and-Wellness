@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+<!-- ChatBot -->
+<link rel="stylesheet" type="text/css" href="css/jquery.convform.css">
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.convform.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+</head>
+<body>
+<!-- ChatBot -->
+<div class="chat_icon">
+	<i class="fa fa-comments" aria-hidden="true"></i>
+</div>
+
+<div class="chat_box">
+	<div class="my-conv-form-wrapper">
+		<form action="" method="GET" class="hidden">
+
+      <select data-conv-question="Hello! How can I help you" name="category">
+        <option value="WebDevelopment">View Medical Records ?</option>
+        <option value="DigitalMarketing">Fitness Queries ?</option>
+      </select>
+
+      <div data-conv-fork="category">
+        <div data-conv-case="WebDevelopment">
+          <input type="text" name="domainName" data-conv-question="Please move to the user profile page and click 'View records'. It will take you to the medical records section. Now you can view the history of various parameters mentioned.">    
+        </div>
+        <div data-conv-case="DigitalMarketing" data-conv-fork="first-question2">
+		  <input type="text" name="companyName" data-conv-question="Step 1 : Listen to your body.
+		  Step 2 : Stay hydrated and fit.
+		  Step 3 : Optimize your nutrition. 
+		Step 4 : Be sure to consume a balanced and perfect diet to support your health condition.
+			Step 5 : Do Exercise and yoga regularly."> 
+        </div>
+      </div>
+
+	  <input type="text" name="name" data-conv-question="We have noticed that your Blood Cholesterol levels and Blood Pressure is High.Have you ever checked the records?
+	  If not , you are not health conscious..!.Please consult a doctor so that You can prevent the critical health defects.">
+
+      <input type="text" data-conv-question="These critical values of high BP leads to Coronary Heart diseases and stroke.So consult a physician as soon as possible" data-no-answer="true">
+
+      <input data-conv-question="Did you get enough information about your medical queries ? " type="text" name="email" required placeholder="How was your experience ?">
+
+      <select data-conv-question="Do you have any more queries ? ">
+		<option value="Yes">Yes</option>
+		<option value="Yes">No</option>
+      </select>
+
+  	</form>
+	</div>
+</div>
+<!-- ChatBot end -->
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<style>
+    #alink{
+  background-color: red;
+  padding: 12px;
+  font-size: medium;
+  color: white;
+  text-decoration: none;
+  width: auto;
+
+}
+</style>
+</head>
+<body>
+
+<div class="tab">
+    <br><br><br>
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">USER PROFILE</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">RECORDS</button>
+  
+</div>
+
+<div id="London" class="tabcontent">
+    <div class="admincontainer">
+       <img src="img/images.png" alt="na" width="50px" height="50px">
+       <p>Admin</p>
+    </div>
+    <br><br><br>
+    <table>
+        <tr>
+          <th>Time</th>
+          <th>Blood Cholesterol level</th>
+          <th>Risk level</th>
+        </tr>
+        <tr>
+          <td>9.30 AM</td>
+          <td>190 mg/dl</td>
+          <td>Normal</td>
+        </tr>
+        <tr>
+            <td>10.00 AM</td>
+            <td>199 mg/dl</td>
+            <td>Normal</td>
+          </tr>
+          <tr>
+            <td>11.00 AM</td>
+            <td>240 mg/dl</td>
+            <td>High</td>
+          </tr>
+          <tr>
+            <td>12.00 PM</td>
+            <td>150 mg/dl</td>
+            <td>Normal</td>
+          </tr>
+          <tr>
+            <td>1.00 PM</td>
+            <td>220 mg/dl</td>
+            <td>Risk for Heart and Brain</td>
+          </tr>
+          <tr>
+            <td>1.30 PM</td>
+            <td>230 mg/dl</td>
+            <td>Risk for Heart and Brain</td>
+          </tr>
+    </table>
+    <button type="submit"><a href="cholesterol.html">VIEW NORMAL RATES AND PRECAUTIONS</a></button>
+   <a id="alink" href="mailto:user1@example.com">Send email Alert</a>
+    
+    
+</div> 
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html>
